@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MITM AI Detection Dashboard</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="../static/css/style.css">
+
+</head>
+
+
+<body>
+
+<div class="container-fluid">
+<div class="row">
+
+<!-- SIDEBAR -->
+
+<nav class="col-md-2 sidebar">
+
+<h3 class="logo">MITM AI</h3>
+
+<ul class="nav flex-column">
+
+<li class="nav-item">
+<a class="nav-link" href="#">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#">Live Detection</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#">Alerts</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#">Packet Logs</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#">Analytics</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#">Model Info</a>
+</li>
+
+</ul>
+
+</nav>
+
+
+<!-- MAIN DASHBOARD -->
+
+<main class="col-md-10 main-content">
+
+<h2>Network Overview</h2>
+
+<!-- STATUS CARDS -->
+
+<div class="row">
+
+<div class="col-lg-4 col-md-6 col-12">
+<div class="card stat-card">
+<h5>Network Status</h5>
+<p id="network-status">Inactive</p>
+</div>
+</div>
+
+<div class="col-lg-4 col-md-6 col-12">
+<div class="card stat-card">
+<h5>Packets Analyzed</h5>
+<p id="packet-count">0</p>
+</div>
+</div>
+
+<div class="col-lg-4 col-md-6 col-12">
+<div class="card stat-card">
+<h5>Detected Attacks</h5>
+<p id="attack-count">0</p>
+</div>
+</div>
+
+</div>
+
+
+<!-- LIVE PACKET TABLE -->
+
+<h3 class="mt-5">Live Packet Detection</h3>
+
+<div class="table-responsive">
+
+<table class="table table-dark table-striped">
+
+<thead>
+
+<tr>
+<th>Time</th>
+<th>Source IP</th>
+<th>Destination IP</th>
+<th>Protocol</th>
+<th>Status</th>
+</tr>
+
+</thead>
+
+<tbody id="packet-table">
+
+</tbody>
+
+</table>
+
+</div>
+
+
+<!-- ALERT SECTION -->
+
+<h3 class="mt-5">Security Alerts</h3>
+
+<div id="alert-box">
+
+</div>
+
+
+<!-- CHART -->
+
+<h3 class="mt-5">Attack Analytics</h3>
+
+<canvas id="attackChart"></canvas>
+
+
+</main>
+
+</div>
+</div>
+
+<script src="../static/js/script.js"></script>
+
+</body>
+
+</html>
